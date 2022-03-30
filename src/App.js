@@ -15,13 +15,12 @@ function App() {
 	  <img src={case_prisma} className="case_prisma-logo"  />
 	  <p>Призма кейс</p>
 	</body>
-
-	<Router>
-		<Routes>
-			<Route exact path="/case_prisma" component={Case_prisma}/>
-		</Routes>
-	</Router>
-	    </div>
+		<Router>
+			<Routes>
+				<Route exact path="/Case_prisma" element={<Case_prisma />} />
+			</Routes>
+		</Router>
+	</div>
 	);
 }
 
