@@ -1,26 +1,19 @@
-import logo from './logo.svg';
+
 import './App.css';
-import case_prisma from './custom_src/case_prisma.png'
 import {BrowserRouter as Router,Routes,Route,Link} from "react-router-dom"
 import Case_prisma from './Case_prisma'
+import Home from './Home'
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>Рулетка</p>
-      </header>
-	  <body className="font_case">
-	  <img src={case_prisma} className="case_prisma-logo"  />
-	  <p>Призма кейс</p>
-	</body>
-		<Router>
-			<Routes>
-				<Route exact path="/Case_prisma" element={<Case_prisma />} />
-			</Routes>
-		</Router>
-	</div>
+      <Router>
+        <Routes>
+          <Route exact path="/" element={<Home />} />
+          <Route exact path="/Case_prisma" element={<Case_prisma />} />
+        </Routes>
+      </Router>
+    </div>
 	);
 }
 
